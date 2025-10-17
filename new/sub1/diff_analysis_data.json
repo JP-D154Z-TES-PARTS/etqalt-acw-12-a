@@ -1,0 +1,965 @@
+{
+  "docx_files": {
+    "main_spec": {
+      "base_file": "52etqalt-acw-11-b.docx",
+      "new_file": "52etqalt-acw-12-a.docx",
+      "base_paragraphs_count": 125,
+      "new_paragraphs_count": 147,
+      "base_tables_count": 10,
+      "new_tables_count": 10,
+      "paragraph_changes": [
+        {
+          "type": "count_change",
+          "base_count": 125,
+          "new_count": 147,
+          "difference": 22
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 1,
+          "base_content": "●オルタマネージャで算出されたオルタトルクをヒス、",
+          "new_content": "●tqalt: TorQue ALTernator"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 2,
+          "base_content": "なまし処理してＩＳＣ制御用にＩＳＣ目標オルタトルクを算出する。",
+          "new_content": "●オルタマネージャで算出されたオルタトルクをヒス、"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 3,
+          "base_content": "※注意：本モジュールは機能安全監視に影響があるため、",
+          "new_content": "なまし処理してＩＳＣ制御用にＩＳＣ目標オルタトルクを算出する。"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 4,
+          "base_content": "仕様変更時（個別含む）は標準仕様管理部署へ相談ください。",
+          "new_content": "※注意：本モジュールは機能安全監視に影響があるため、"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 5,
+          "base_content": "１．公開変数",
+          "new_content": "仕様変更時（個別含む）は標準仕様管理部署へ相談ください。"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 6,
+          "base_content": "・同時性保証変数",
+          "new_content": "１．公開変数"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 7,
+          "base_content": "２．非公開変数",
+          "new_content": "・同時性保証変数"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 8,
+          "base_content": "３．バックアップ変数",
+          "new_content": "２．非公開変数"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 9,
+          "base_content": "１．etqalt（現在オルタトルク）の算出（16ms）",
+          "new_content": "３．バックアップ変数"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 10,
+          "base_content": "etqalt ← etqaltt  (emnet_enet ／ t_ne)",
+          "new_content": "１．etqalt（現在オルタトルク）の算出（16ms）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 11,
+          "base_content": "ここで、",
+          "new_content": "(1)回転数補正使用時（etqalt_XKNE_USE ＝ ON）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 12,
+          "base_content": "t_ne ← ene_ene ≧ etqalt_NEGD(例 200(rpm))",
+          "new_content": "etqalt ← etqaltt × (emnet_enet ／ t_ne)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 13,
+          "base_content": "２．etqaltisc[0]（ＩＳＣ目標オルタトルク(将来)）、",
+          "new_content": "ここで、・t_ne(下限ガード後エンジン回転数)の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 14,
+          "base_content": "etqaltisc[1]（ＩＳＣ現在オルタトルク(直近)）の算出（16ms）",
+          "new_content": "t_ne ← ene_ene ≧ etqalt_NEGD(例 200(rpm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 15,
+          "base_content": "etqaltisc[0] ← etqelst",
+          "new_content": "(2)上記条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 16,
+          "base_content": "etqaltisc[1] ← etqelst",
+          "new_content": "etqalt ← etqaltt"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 17,
+          "base_content": "２－１．etqelst（目標電気負荷トルク）の算出",
+          "new_content": "２．etqaltisc[0]（ＩＳＣ目標オルタトルク(将来)）、"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 18,
+          "base_content": "etqelst ← t_tqgdlo ≦ etqelstb ≦ t_tqgdhi",
+          "new_content": "etqaltisc[1]（ＩＳＣ現在オルタトルク(直近)）の算出（16ms）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 19,
+          "base_content": "(1)t_tqgdlo（トルク下限ガード値）、t_tqgdhi（トルク上限ガード値）の算出",
+          "new_content": "etqaltisc[0] ← etqelst"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 20,
+          "base_content": "① 補正量と要求値との偏差小（｜etqelstb － 前回etqelst｜ ＜ t_dltrqabs）",
+          "new_content": "etqaltisc[1] ← etqelst"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 21,
+          "base_content": "t_tqgdlo ← 前回etqelst － etqalt_DLGDMNL(例 0.03125(Nm))",
+          "new_content": "２－１．etqelst（目標電気負荷トルク）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 22,
+          "base_content": "t_tqgdhi ← 前回etqelst ＋ etqalt_DLGDMNH(例 0.03125(Nm))",
+          "new_content": "etqelst ← t_tqgdlo ≦ etqelstb ≦ t_tqgdhi"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 23,
+          "base_content": "② 上記不成立時",
+          "new_content": "(1)t_tqgdlo（トルク下限ガード値）、t_tqgdhi（トルク上限ガード値）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 24,
+          "base_content": "t_tqgdlo ← 前回etqelst － etqalt_DLGDMXL(例 20(Nm))",
+          "new_content": "① 補正量と要求値との偏差小（｜etqelstb － 前回etqelst｜ ＜ t_dltrqabs）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 25,
+          "base_content": "t_tqgdhi ← 前回etqelst ＋ etqalt_DLGDMXH(例 20(Nm))",
+          "new_content": "t_tqgdlo ← 前回etqelst － etqalt_DLGDMNL(例 0.03125(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 26,
+          "base_content": "(2)t_dltrqabs（偏差量判定値）の算出",
+          "new_content": "t_tqgdhi ← 前回etqelst ＋ etqalt_DLGDMNH(例 0.03125(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 27,
+          "base_content": "① ベース要求値変化後所定時間未満（ecrqbchg_16m ＜ etqalt_CDECHYS(例 500(ms))）",
+          "new_content": "② 上記不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 28,
+          "base_content": "t_dltrqabs ← etqalt_DLTQABSH(例 0.5(Nm))",
+          "new_content": "t_tqgdlo ← 前回etqelst － etqalt_DLGDMXL(例 20(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 29,
+          "base_content": "② 上記不成立時",
+          "new_content": "t_tqgdhi ← 前回etqelst ＋ etqalt_DLGDMXH(例 20(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 30,
+          "base_content": "t_dltrqabs ← etqalt_DLTQABSL(例 0.125(Nm))",
+          "new_content": "(2)t_dltrqabs（偏差量判定値）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 31,
+          "base_content": "(3)ecrqbchg_16m（ベース要求値変化カウンタ）のクリア",
+          "new_content": "① ベース要求値変化後所定時間未満（ecrqbchg_16m ＜ etqalt_CDECHYS(例 500(ms))）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 32,
+          "base_content": "① クリア条件",
+          "new_content": "t_dltrqabs ← etqalt_DLTQABSH(例 0.5(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 33,
+          "base_content": "ベース要求値変化時（t_dlpwrrqb ≠ 0(kW)）",
+          "new_content": "② 上記不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 34,
+          "base_content": "(4)t_dlpwrrqb（ベース要求値変化量）の算出",
+          "new_content": "t_dltrqabs ← etqalt_DLTQABSL(例 0.125(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 35,
+          "base_content": "t_dlpwrrqb ← （epwrelsrqb － 前回epwrelsrqb） ＊ ebattsm ／ etqalt_BATB(例 13.5(V))",
+          "new_content": "(3)ecrqbchg_16m（ベース要求値変化カウンタ）のクリア"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 36,
+          "base_content": "ここで、・ebattsm（バッテリ電圧）の算出（65ms）",
+          "new_content": "① クリア条件"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 37,
+          "base_content": "ebattsm ← 前回ebattsm ＋ （cpowif_b － 前回ebattsm）",
+          "new_content": "ベース要求値変化時（t_dlpwrrqb ≠ 0(kW)）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 38,
+          "base_content": "／ etqalt_BATNSM(例 131.072(ms) ／ 65.536(ms))",
+          "new_content": "(4)t_dlpwrrqb（ベース要求値変化量）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 39,
+          "base_content": "２－２．etqelstb（目標電気負荷トルクベース値）の算出",
+          "new_content": "t_dlpwrrqb ← （epwrelsrqb － 前回epwrelsrqb） ＊ ebattsm ／ etqalt_BATB(例 13.5(V))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 40,
+          "base_content": "etqelstb ← 最大値｛ etqaltt、t_tqelsswrq ｝",
+          "new_content": "ここで、・ebattsm（バッテリ電圧）の算出（65ms）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 41,
+          "base_content": "ここで、t_tqelsswrq（ＳＷ入力の電気負荷トルク）の算出",
+          "new_content": "ebattsm ← 前回ebattsm ＋ （cpowif_b － 前回ebattsm）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 42,
+          "base_content": "ELIB_CONV_PTOT（epwrelsrq、emnet_enet 、t_tqelsswrq） ※パワーをトルクに変換",
+          "new_content": "／ etqalt_BATNSM(例 131.072(ms) ／ 65.536(ms))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 43,
+          "base_content": "３．etqaltt（目標オルタトルク）の算出（16ms）",
+          "new_content": "２－２．etqelstb（目標電気負荷トルクベース値）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 44,
+          "base_content": "etqaltt ← etqalttb  t_ktqalt",
+          "new_content": "etqelstb ← 最大値｛ etqaltt、t_tqelsswrq ｝"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 45,
+          "base_content": "ここで、",
+          "new_content": "ここで、t_tqelsswrq（ＳＷ入力の電気負荷トルク）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 46,
+          "base_content": "t_ktqalt ← ektqalt_map（ene_eneの次元ﾏｯﾌﾟ）",
+          "new_content": "ELIB_CONV_PTOT（epwrelsrq、emnet_enet 、t_tqelsswrq） ※パワーをトルクに変換"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 47,
+          "base_content": "３－１．etqalttb（目標オルタトルクベース値）の算出",
+          "new_content": "３．etqaltt（目標オルタトルク）の算出（16ms）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 48,
+          "base_content": "(1)算出条件（共に）",
+          "new_content": "etqaltt ← etqalttb × t_ktqalt"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 49,
+          "base_content": "①始動後、所定以上経過（exst_ecast_16m ≧ ecast）",
+          "new_content": "ここで、・t_ktqalt(オルタトルク補正係数)の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 50,
+          "base_content": "②下記条件が成立（共に）",
+          "new_content": "t_ktqalt ← ektqalt_map（ene_eneとealtifsmとebattsmの3次元ﾏｯﾌﾟ）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 51,
+          "base_content": "(a)バッテリ入力信号異常でない（wbatt_fdi_xbattClFt ＝ OFF）",
+          "new_content": "３－１．etqalttb（目標オルタトルクベース値）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 52,
+          "base_content": "(b)バッテリ電圧低下でない（yaltlmp_yxbattlo ＝ OFF）【充電制御有】",
+          "new_content": "(1)算出条件（共に）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 53,
+          "base_content": "(2)上記算出条件成立時",
+          "new_content": "①始動後、所定以上経過（exst_ecast_16m ≧ ecast）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 54,
+          "base_content": "etqalttb ← 前回etqalttb ＋ （ t_tqalttb － 前回etqalttb ）",
+          "new_content": "②下記条件が成立（共に）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 55,
+          "base_content": "／ etqalt_TQNSM(例 131.072(ms) ／ 16.384(ms))",
+          "new_content": "(a)バッテリ入力信号異常でない（wbatt_fdi_xbattClFt ＝ OFF）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 56,
+          "base_content": "ここで、",
+          "new_content": "(b)バッテリ電圧低下でない（yaltlmp_yxbattlo ＝ OFF）【充電制御有】"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 57,
+          "base_content": "t_tqalttb ← yaltinfo_yalttrq  (ene_ene ／ emnet_enet)",
+          "new_content": "(2)上記算出条件成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 58,
+          "base_content": "ただし、｜t_tqalttb － 前回etqalttb｜ ＜ etqalt_TQHYS(例 0.3(Nm))の時、",
+          "new_content": "etqalttb ← 前回etqalttb ＋ （ t_tqalttb － 前回etqalttb ）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 59,
+          "base_content": "etqalttb ← 前回etqalttb",
+          "new_content": "／ etqalt_TQNSM(例 131.072(ms) ／ 16.384(ms))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 60,
+          "base_content": "(3)算出条件不成立時",
+          "new_content": "ここで、・t_tqalttb（回転数補正オルタトルク）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 61,
+          "base_content": "etqalttb ← etqalt_TQINT(例 3(Nm))",
+          "new_content": "①回転数補正使用時（etqalt_XKNE_USE ＝ ON）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 62,
+          "base_content": "４．各電気負荷の算出（16ms）",
+          "new_content": "t_tqalttb ← yaltinfo_yalttrq × (ene_ene ／ emnet_enet)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 63,
+          "base_content": "４－１．epwrelsrq（ＳＷ入力の電気負荷動力）の算出",
+          "new_content": "②上記条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 64,
+          "base_content": "(1)条件",
+          "new_content": "t_tqalttb ← yaltinfo_yalttrq"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 65,
+          "base_content": "減衰処理実行（expwrdec ＝ ON）",
+          "new_content": "ただし、｜t_tqalttb － 前回etqalttb｜ ＜ etqalt_TQHYS(例 0.3(Nm))の時、"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 66,
+          "base_content": "(2)上記条件成立時",
+          "new_content": "etqalttb ← 前回etqalttb"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 67,
+          "base_content": "epwrelsrq ← t_pwrelsrq ＊ etqalt_DECRTO(例 0.975(倍))",
+          "new_content": "(3)算出条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 68,
+          "base_content": "※etqalt_DECRTOは時定数640(ms)相当値としておく",
+          "new_content": "etqalttb ← etqalt_TQINT(例 3(Nm))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 69,
+          "base_content": "(3)上記条件不成立時",
+          "new_content": "３－２．ealtifsm（オルタ励磁電流）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 70,
+          "base_content": "epwrelsrq ← t_pwrelsrq",
+          "new_content": "(1)算出条件（共に）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 71,
+          "base_content": "(4)t_pwrelsrq（減衰前ＳＷ入力電気負荷動力）の算出",
+          "new_content": "①始動後、所定以上経過（exst_ecast_16m ≧ ecast）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 72,
+          "base_content": "① 電気負荷動力ベース値が増加時（epwrelsrqb ＞ 前回epwrelsrqb）",
+          "new_content": "②バッテリ入力信号異常でない（wbatt_fdi_xbattClFt ＝ OFF）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 73,
+          "base_content": "t_pwrelsrq ← 前回epwrels ＋ t_dlpwrrqb ≧ 0(kW)",
+          "new_content": "③バッテリ電圧低下でない（yaltlmp_yxbattlo ＝ OFF）【充電制御有】"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 74,
+          "base_content": "② 上記以外の時",
+          "new_content": "(2)上記条件成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 75,
+          "base_content": "t_pwrelsrq ← 前回epwrelsrq ＋ t_dlpwrrqb ≧ 0(kW)",
+          "new_content": "ealtifsm ← 前回ealtifsm ＋"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 76,
+          "base_content": "(5)expwrdec（減衰実行フラグ）の算出",
+          "new_content": "（yaltinfo_yaltif － 前回ealtifsm）／ etqalt_ALTISM(例 65.536/16.384(回))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 77,
+          "base_content": "① セット条件（いずれか）",
+          "new_content": "(3)上記条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 78,
+          "base_content": "(a)所定時間経過（ecdecdly_16m ≧ etqalt_CDECDLY(例 150(ms))）",
+          "new_content": "ealtifsm ← eifint_map（ethw_ethwstによる1次元ﾏｯﾌﾟ）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 79,
+          "base_content": "(b)ベース電気負荷無し（epwrelsrqb ≦ 0(kW)）",
+          "new_content": "３－３．ecast（始動後経過時間判定値）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 80,
+          "base_content": "(c)ＳＷ入力の電気負荷がオルタパワー以下（t_pwrelsrq ≦ epwralt）",
+          "new_content": "(1)算出条件"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 81,
+          "base_content": "② クリア条件（優先）",
+          "new_content": "始動時（exst_exastefi(u1で参照) ＝ OFF）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 82,
+          "base_content": "ベース要求値増加時（t_dlpwrrqb ＞ etqalt_DLPWR(例 0(kW))）",
+          "new_content": "(2)上記条件成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 83,
+          "base_content": "(6)ecdecdly_16m（徐変ディレーカウンタ）の算出",
+          "new_content": "ecast ← ecaltst_map（ethw_ethwによる1次元ﾏｯﾌﾟ）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 84,
+          "base_content": "① クリア条件",
+          "new_content": "４．各電気負荷の算出（16ms）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 85,
+          "base_content": "ベース要求値増加時（t_dlpwrrqb ＞ etqalt_DLPWR(例 0(kW))）",
+          "new_content": "４－１．epwrelsrq（ＳＷ入力の電気負荷動力）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 86,
+          "base_content": "４－２．epwrels（電気負荷動力）の算出",
+          "new_content": "(1)条件"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 87,
+          "base_content": "epwrels ← 最大値｛ epwrelsrq、epwralt ＋ epwaltsoc ｝【充電制御有】",
+          "new_content": "減衰処理実行（expwrdec ＝ ON）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 88,
+          "base_content": "epwrels ← 最大値｛ epwrelsrq、epwralt ｝【充電制御無】",
+          "new_content": "(2)上記条件成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 89,
+          "base_content": "４－２－１．epwaltsoc（目標電圧上昇時空気応答遅れ補正量）の算出【充電制御有】",
+          "new_content": "epwrelsrq ← t_pwrelsrq ＊ etqalt_DECRTO(例 0.975(倍))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 90,
+          "base_content": "epwaltsoc ← epwaltsocb ≦ etqalt_PWALTSOCGD(例 0.8(kW))",
+          "new_content": "※etqalt_DECRTOは時定数640(ms)相当値としておく"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 91,
+          "base_content": "ここで、・epwaltsocb（目標電圧上昇時空気応答遅れベース補正量）の算出",
+          "new_content": "(3)上記条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 92,
+          "base_content": "(1)算出条件(共に)",
+          "new_content": "epwrelsrq ← t_pwrelsrq"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 93,
+          "base_content": "① 始動後所定時間経過（exst_ecast_16m ≧ etqalt_CASTALTDLY(例 2000(ms))）",
+          "new_content": "(4)t_pwrelsrq（減衰前ＳＷ入力電気負荷動力）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 94,
+          "base_content": "② オルタ負荷増大へ変化時（ysocpublic_yxaltldinc ＝ OFF → ON）",
+          "new_content": "① 電気負荷動力ベース値が増加時（epwrelsrqb ＞ 前回epwrelsrqb）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 95,
+          "base_content": "(2)算出条件成立時",
+          "new_content": "t_pwrelsrq ← 前回epwrels ＋ t_dlpwrrqb ≧ 0(kW)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 96,
+          "base_content": "epwaltsocb ← epwaltsocb_map（epwraltの1次元ﾏｯﾌﾟ）",
+          "new_content": "② 上記以外の時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 97,
+          "base_content": "(3)算出条件不成立時",
+          "new_content": "t_pwrelsrq ← 前回epwrelsrq ＋ t_dlpwrrqb ≧ 0(kW)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 98,
+          "base_content": "① オルタ負荷増大継続時(ysocpublic_yxaltldinc ＝ ON)",
+          "new_content": "(5)expwrdec（減衰実行フラグ）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 99,
+          "base_content": "epwaltsocb ← 前回epwaltsocb － etqalt_DECALT(例 0.015(kW)) ≧ 0(kW)",
+          "new_content": "① セット条件（いずれか）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 100,
+          "base_content": "② 上記以外",
+          "new_content": "(a)所定時間経過（ecdecdly_16m ≧ etqalt_CDECDLY(例 150(ms))）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 101,
+          "base_content": "epwaltsocb ← 0(kW)",
+          "new_content": "(b)ベース電気負荷無し（epwrelsrqb ≦ 0(kW)）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 102,
+          "base_content": "４－３．epwralt（オルタパワー）の算出",
+          "new_content": "(c)ＳＷ入力の電気負荷がオルタパワー以下（t_pwrelsrq ≦ epwralt）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 103,
+          "base_content": "ELIB_CONV_TTOP（etqaltt、emnet_enet 、epwralt） ※トルクをパワーに変換",
+          "new_content": "② クリア条件（優先）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 104,
+          "base_content": "５．epwrelsrqb（電気負荷動力ベース値）の算出（16ms）",
+          "new_content": "ベース要求値増加時（t_dlpwrrqb ＞ etqalt_DLPWR(例 0(kW))）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 105,
+          "base_content": "epwrelsrqbは下記の信号に該当する電気負荷を積算して算出する",
+          "new_content": "(6)ecdecdly_16m（徐変ディレーカウンタ）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 106,
+          "base_content": "（電気負荷の入力が無い時はepwrelsrqb ← 0(kW)とする）",
+          "new_content": "① クリア条件"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 107,
+          "base_content": "epwrelsrqb ← 電気負荷の積算値 ≦ etqalt_PWRELSGD(例 1.5(kW))",
+          "new_content": "ベース要求値増加時（t_dlpwrrqb ＞ etqalt_DLPWR(例 0(kW))）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 108,
+          "base_content": "５－１．電気負荷一覧",
+          "new_content": "４－２．epwrels（電気負荷動力）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 109,
+          "base_content": "ここで、・epwrfan（電動ファン電力）の算出【ON/OFF電動ﾌｧﾝ方式】",
+          "new_content": "epwrels ← 最大値｛ epwrelsrq、epwralt ＋ epwaltsoc ｝【充電制御有】"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 110,
+          "base_content": "(1)電動ファンＬＯの時（afanif_get_outmnt( ) ＝ AFANIF_LO）",
+          "new_content": "epwrels ← 最大値｛ epwrelsrq、epwralt ｝【充電制御無】"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 111,
+          "base_content": "epwrfan ← etqalt_FANLO(例 0(kW))",
+          "new_content": "４－２－１．epwaltsoc（目標電圧上昇時空気応答遅れ補正量）の算出【充電制御有】"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 112,
+          "base_content": "(2)電動ファンＨＩの時（afanif_get_outmnt( ) ＝ AFANIF_HI）",
+          "new_content": "epwaltsoc ← epwaltsocb ≦ etqalt_PWALTSOCGD(例 0.8(kW))"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 113,
+          "base_content": "epwrfan ← etqalt_FANHI(例 0(kW))",
+          "new_content": "ここで、・epwaltsocb（目標電圧上昇時空気応答遅れベース補正量）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 114,
+          "base_content": "(3)電動ファンＯＦＦの時（afanif_get_outmnt( ) ＝ AFANIF_OFF）",
+          "new_content": "(1)算出条件(共に)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 115,
+          "base_content": "epwrfan ← 0(kW)",
+          "new_content": "① 始動後所定時間経過（exst_ecast_16m ≧ etqalt_CASTALTDLY(例 2000(ms))）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 116,
+          "base_content": "・epwrfan（電動ファン電力）の算出【PWM電動ﾌｧﾝ方式】",
+          "new_content": "② オルタ負荷増大へ変化時（ysocpublic_yxaltldinc ＝ OFF → ON）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 117,
+          "base_content": "epwrfan ← epwrfan_map（afanif_get_voltage( )の1次元ﾏｯﾌﾟ）",
+          "new_content": "(2)算出条件成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 118,
+          "base_content": "ebattsm ← etqalt_BATINT(例 12(V))",
+          "new_content": "epwaltsocb ← epwaltsocb_map（epwraltの1次元ﾏｯﾌﾟ）"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 119,
+          "base_content": "1",
+          "new_content": "(3)算出条件不成立時"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 120,
+          "base_content": "１．公開定数",
+          "new_content": "① オルタ負荷増大継続時(ysocpublic_yxaltldinc ＝ ON)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 121,
+          "base_content": "２．公開処理要求",
+          "new_content": "epwaltsocb ← 前回epwaltsocb － etqalt_DECALT(例 0.015(kW)) ≧ 0(kW)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 122,
+          "base_content": "３．参照変数・定数",
+          "new_content": "② 上記以外"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 123,
+          "base_content": "４．参照処理要求",
+          "new_content": "epwaltsocb ← 0(kW)"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 124,
+          "base_content": "５．外部トリガ",
+          "new_content": "４－３．epwralt（オルタパワー）の算出"
+        },
+        {
+          "type": "content_change",
+          "paragraph_index": 125,
+          "base_content": "Ｒ９コンパイラ",
+          "new_content": "ELIB_CONV_TTOP（etqaltt、emnet_enet 、epwralt） ※トルクをパワーに変換"
+        }
+      ],
+      "table_changes": []
+    }
+  },
+  "xlsx_files": {
+    "main_spec": {
+      "base_file": "52etqalt-acw-11-b.xlsx",
+      "new_file": "52etqalt-acw-12-a.xlsx",
+      "base_sheets": [
+        "標準"
+      ],
+      "new_sheets": [
+        "標準"
+      ],
+      "sheet_changes": [],
+      "content_changes": [
+        {
+          "type": "cell_changes",
+          "sheet": "標準",
+          "change_count": 4,
+          "sample_changes": [
+            {
+              "sheet": "標準",
+              "cell": "F2",
+              "base_value": "ｅｔｑａｌｔ－ａｃｗ－１１－ｂ",
+              "new_value": "ｅｔｑａｌｔ－ａｃｗ－１２－ａ"
+            },
+            {
+              "sheet": "標準",
+              "cell": "M2",
+              "base_value": "2024-08-05 00:00:00",
+              "new_value": "2025-08-06 00:00:00"
+            },
+            {
+              "sheet": "標準",
+              "cell": "C3",
+              "base_value": "c_matﾌｧｲﾙ差し替え  有",
+              "new_value": "c_matﾌｧｲﾙ差し替え  無"
+            },
+            {
+              "sheet": "標準",
+              "cell": "D4",
+              "base_value": "TEN",
+              "new_value": "DN"
+            }
+          ]
+        }
+      ]
+    },
+    "logic_change_sheet": {
+      "base_file": "ロジック変更シート_ver9.06_etqalt.xlsx",
+      "new_file": "ロジック変更シート_ver9.09_etqalt.xlsx",
+      "base_sheets": [
+        "変更履歴",
+        "acw-11-b",
+        "acw-11-a",
+        "acw-10-b",
+        "acw-10-a",
+        "ac0-01-b",
+        "ac0-01-a",
+        "ac0-00-b",
+        "ac0-00-a",
+        "aa0-06-b",
+        "aa0-06-a",
+        "aa0-05-b",
+        "aa0-05-a",
+        "32bit最新仕様からの変更シート",
+        "【参考】機能配置変更",
+        "aa0-04-a-zm",
+        "aa0-03-b-zm",
+        "aa0-03-a-zm",
+        "aa0-02-a ",
+        "aa0-01-a",
+        "aa0-00-a ",
+        "履歴_"
+      ],
+      "new_sheets": [
+        "変更履歴",
+        "acw-12-a",
+        "acw-11-b",
+        "acw-11-a",
+        "acw-10-b",
+        "acw-10-a",
+        "ac0-01-b",
+        "ac0-01-a",
+        "ac0-00-b",
+        "ac0-00-a",
+        "aa0-06-b",
+        "aa0-06-a",
+        "aa0-05-b",
+        "aa0-05-a",
+        "32bit最新仕様からの変更シート",
+        "【参考】機能配置変更",
+        "aa0-04-a-zm",
+        "aa0-03-b-zm",
+        "aa0-03-a-zm",
+        "aa0-02-a ",
+        "aa0-01-a",
+        "aa0-00-a ",
+        "履歴_"
+      ],
+      "sheet_changes": [
+        {
+          "type": "added_sheets",
+          "sheets": [
+            "acw-12-a"
+          ]
+        }
+      ],
+      "content_changes": [
+        {
+          "type": "cell_changes",
+          "sheet": "変更履歴",
+          "change_count": 5,
+          "sample_changes": [
+            {
+              "sheet": "変更履歴",
+              "cell": "B9",
+              "base_value": "",
+              "new_value": "acw-12-a"
+            },
+            {
+              "sheet": "変更履歴",
+              "cell": "C9",
+              "base_value": "",
+              "new_value": "(1)サイバーセキュリティー対応"
+            },
+            {
+              "sheet": "変更履歴",
+              "cell": "D9",
+              "base_value": "",
+              "new_value": "2025-07-14 00:00:00"
+            },
+            {
+              "sheet": "変更履歴",
+              "cell": "E9",
+              "base_value": "",
+              "new_value": "EPF5-3G福田"
+            },
+            {
+              "sheet": "変更履歴",
+              "cell": "F9",
+              "base_value": "",
+              "new_value": "FSI 仙波"
+            }
+          ]
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "aa0-06-a",
+          "base_dimensions": "170x47",
+          "new_dimensions": "170x46"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "aa0-05-b",
+          "base_dimensions": "164x47",
+          "new_dimensions": "164x46"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "ac0-00-b",
+          "base_dimensions": "107x47",
+          "new_dimensions": "107x46"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "acw-10-b",
+          "base_dimensions": "112x52",
+          "new_dimensions": "112x51"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "ac0-00-a",
+          "base_dimensions": "177x47",
+          "new_dimensions": "177x46"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "acw-11-a",
+          "base_dimensions": "212x88",
+          "new_dimensions": "210x88"
+        },
+        {
+          "type": "dimension_change",
+          "sheet": "aa0-06-b",
+          "base_dimensions": "145x47",
+          "new_dimensions": "145x46"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "analysis_date": "2025-10-17T08:34:52.432220",
+    "base_path": "/home/runner/work/etqalt-acw-12-a/etqalt-acw-12-a/base/etqalt-acw-11-b_spec",
+    "new_path": "/home/runner/work/etqalt-acw-12-a/etqalt-acw-12-a/new/etqalt-acw-12-a",
+    "total_files_compared": 3
+  }
+}
